@@ -1,0 +1,9 @@
+main:	MOV R0, 0x000A
+	MOV R1, 0x0001
+	MOV R2, 0x0001
+	MOV R3, R2
+ciclo:	ADD R3, R1
+	MOV R1, R2
+	MOV R2, R3
+	SUB R0, 0x0001
+	JG ciclo
