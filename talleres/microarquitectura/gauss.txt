@@ -1,0 +1,7 @@
+     |00| SET R1 , 0x00
+     |02| ADD R1 , R0
+cond |04| DEC R0
+     |06| JZ halt
+main |08| ADD R1 , R0
+     |0a| JMP cond
+halt |0c| JMP halt
