@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 0000 # R0
 0000 # R1
 0000 # R2
@@ -10,4 +11,18 @@
 0000 # IR
 FFEF # SP
 0000 # Start mem position
+=======
+0000 # R0
+0000 # R1
+0000 # R2
+0000 # R3
+0000 # R4
+0000 # R5
+0000 # R6
+0000 # R7
+0000 # PC
+0000 # IR
+FFEF # SP
+0000 # Start mem position
+>>>>>>> 9ea2d4c8a01f4d428161f124ee247ef46c3e85ab
 ejercicio3_Mem.dat # Memory file

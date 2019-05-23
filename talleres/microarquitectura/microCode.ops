@@ -57,6 +57,7 @@
 01000: ; MOV
     RB_enOut RB_selectIndexOut=1 RB_enIn RB_selectIndexIn=0
     reset_microOp
+<<<<<<< HEAD
 
 01001: ; SIG
 	 RB_enOut  ALU_enA  RB_selectIndexOut=0
@@ -78,6 +79,8 @@
 	ALU_OP=ADD
 	RB_enIn ALU_enOut RB_selectIndexIn=0
 	reset_microOp
+=======
+>>>>>>> 9ea2d4c8a01f4d428161f124ee247ef46c3e85ab
   
 10000: ; STR [M] <- Rx
     DE_enOutImm MM_enAddr
@@ -94,7 +97,10 @@
     RB_enOut RB_selectIndexOut=1 MM_load
     reset_microOp
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9ea2d4c8a01f4d428161f124ee247ef46c3e85ab
 10011: ; LOAD Rx <- [Ry]
     RB_enOut RB_selectIndexOut=1 MM_enAddr
     RB_enIn  RB_selectIndexOut=0 MM_enOut 

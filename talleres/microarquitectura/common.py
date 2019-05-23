@@ -83,14 +83,23 @@ def tokenizator(filename):
 type_RR = ["ADD","ADC","SUB","AND","OR" ,"XOR","CMP","MOV"]
 type_RM = ["STR","LOAD"]
 type_M  = ["JMP","JC","JZ","JN"]
+<<<<<<< HEAD
 type_R  = ["INC","DEC", "SIG", "NEG"]
+=======
+type_R  = ["INC","DEC"]
+>>>>>>> 9ea2d4c8a01f4d428161f124ee247ef46c3e85ab
 type_RS = ["SHR","SHL"]
 type_RI = ["SET"]
 def_DB  = ["DB"]
 
 opcodes = {"ADD" : 1, "ADC" : 2, "SUB" : 3, "AND"  : 4, "OR"  : 5, "XOR" : 6, "CMP" : 7, "MOV" : 8,
+<<<<<<< HEAD
            "SIG" : 9, "NEG" : 10, "STR" :16, "LOAD":17, "STRr":18, "LOADr":19, 
            "JMP" :20, "JC"  :21, "JZ"  :22, "JN"   :23, 
+=======
+           "STR" :16, "LOAD":17, "STRr":18, "LOADr":19,
+           "JMP" :20, "JC"  :21, "JZ"  :22, "JN"   :23,
+>>>>>>> 9ea2d4c8a01f4d428161f124ee247ef46c3e85ab
            "INC" :24, "DEC" :25, "SHR" :26, "SHL"  :27, "SET" :31}
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
