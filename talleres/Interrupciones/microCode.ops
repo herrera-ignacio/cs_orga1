@@ -5,8 +5,15 @@
     PC_enOut MM_enAddr
     MM_enOut DE_loadL PC_inc
     load_microOp
+    ALU_OP=cte0xFF ALU_opW		; Cargo posicion 0xff que sirve de SP
+    ALU_enOut MM_enAddr			; Accedo a memoria 0xff para guardar PC
+    PC_enOut MM_load			; Guardo PC en 0xff
+    IC_cli				; Coloco I=0 para evitar otra int
+    ALU_OP=cte0x00 ALU_opW		; Cargo posicion 0x00 para ver rutina int
+    ALU_enOut MM_enAddr			; Accedo a posicion de memoria 0x00
+    MM_enOut PC_load			; Cargo dir de rutina int en PC
+    IC_inta				; Activo senial inta del IC
     reset_microOp
-    reset_microOp ; COMPLETAR
 
 00001: ; ADD
     RB_enOut  ALU_enA  RB_selectIndexOut=0
@@ -158,13 +165,19 @@
     reset_microOp
 
 11100: ; STI
-    reset_microOp ; COMPLETAR
+    IC_sti 	  ; I := 1
+    reset_microOp
 
 11101: ; CLI
-    reset_microOp ; COMPLETAR
+    IC_cli 	  ; I := 0
+    reset_microOp
 
 11110: ; IRET
-    reset_microOp ; COMPLETAR
+    ALU_OP=cte0xFF ALU_opW	; Cargo posicion 0xff (SP) donde guarde PC
+    ALU_enOut MM_enAddr		; Accedo a memoria 0xff
+    MM_enOut PC_load		; Reestablesco contenido de PC
+    IC_sti			; I := Vuelve a habilitar int
+    reset_microOp
 
 11111: ; SET
     DE_enOutImm RB_enIn
